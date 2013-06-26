@@ -3,12 +3,10 @@ package org.teachingkidsprogramming.recipes.homework;
 import junit.framework.Assert;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.Turtle;
 import org.teachingextensions.logo.utils.TortoiseUtils;
-
 
 public class Homework01
 {
@@ -24,7 +22,7 @@ public class Homework01
   @Test
   public void numbersDoNotNeedQuotes()
   {
-    Assert.assertEquals(42, ____);
+    Assert.assertEquals(42, ___);
   }
   @Test
   public void defaultWidthForTheTortoise() throws Exception
