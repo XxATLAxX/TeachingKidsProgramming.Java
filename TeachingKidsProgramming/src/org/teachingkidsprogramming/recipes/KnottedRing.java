@@ -1,5 +1,6 @@
 package org.teachingkidsprogramming.recipes;
 
+import org.teachingextensions.logo.ColorWheel;
 import org.teachingextensions.logo.Colors;
 import org.teachingextensions.logo.Tortoise;
 
@@ -8,22 +9,20 @@ public class KnottedRing
   public static void main(String[] args)
   {
     Tortoise.setSpeed(10);
-    //      createColorPalette (recipe below) --#6
-    //      ------------- Recipe for createColorPalette --#6
-    //      Add hot pink to the color wheel --#6
-    //      Add red to the color wheel --#12
-    //      Add fuchsia to the color wheel --#13
-    //      Add orange red to the color wheel --#14
-    //      Add deep pink to the color wheel --#15
-    //      Add medium violet red to the color wheel --#16
-    //      Add crimson to the color wheel --#17
-    //      Add tomato to the color wheel --#18
-    //      ------------- End of createColorPalette recipe --#6
-    //      Do the following 30 times --#10
-    //              Change the color of the line the tortoise draws to a random color from the color wheel --#5
-    Tortoise.setPenColor(Colors.getRandomColor());
-    //              drawOctagonWithOverlap (recipe below) --#8
-    //              ------------- Recipe for drawOctagonWithOverlap --#7
+    ColorWheel.addColor(Colors.Pinks.HotPink);
+    ColorWheel.addColor(Colors.Reds.Red);
+    ColorWheel.addColor(Colors.Purples.Fuchsia);
+    ColorWheel.addColor(Colors.Oranges.Orange);
+    ColorWheel.addColor(Colors.Pinks.DeepPink);
+    ColorWheel.addColor(Colors.Purples.MediumVioletRed);
+    ColorWheel.addColor(Colors.Reds.Crimson);
+    ColorWheel.addColor(Colors.Reds.Tomato);
+    for (int i = 1; i <= 30; i++)
+    {
+      Tortoise.setPenColor(Colors.getRandomColor());
+      //              drawOctagonWithOverlap (recipe below) --#8
+      //              ------------- Recipe for drawOctagonWithOverlap --#7
+    }
     for (int i = 1; i <= 9; i++)
     {
       Tortoise.move(110);
@@ -31,8 +30,9 @@ public class KnottedRing
       Tortoise.turn(45);
     }
     //              ------------- End of drawOctagonWithOverlap recipe --#7
-    //       Turn the tortoise 1/30th of 360 degrees to the right --#9
-    //       Turn the tortoise 5 more degrees to the right --#11
+    Tortoise.turn(12);
+    Tortoise.turn(17);
+    Tortoise.turn(17);
     //       Repeat 
   }
 }
